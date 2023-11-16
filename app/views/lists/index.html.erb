@@ -1,0 +1,9 @@
+<h1>Mes listes de films</h1>
+<ul>
+  <% @lists.each do |list| %>
+  <li>
+    <%= list.name.capitalize %>
+    <%= link_to "voir le détail", list_path(list) %>
+  </li>
+  <% end %>
+    <%= link_to "Ajouter une liste", new_list_path %>

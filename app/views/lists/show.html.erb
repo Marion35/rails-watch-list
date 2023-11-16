@@ -1,0 +1,16 @@
+<h1><%= @list.name %></h1>
+
+<%= simple_form_for(@bookmark) do |f| %>
+  <%= f.input :content %>
+  <%= f.association :movie %>
+  <%= f.association :list %>
+  <%= f.submit %>
+<% end %>
+
+<ul>
+  <% @bookmarks.each do |bookmark| %>
+  <li>
+    <%= bookmark.comment %>
+  </li>
+  <% end %>
+</ul>
